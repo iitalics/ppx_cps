@@ -1,0 +1,6 @@
+opam-verion: "1.2"
+build: [ "jbuilder" "build" "-p" name "-j" jobs ]
+depends: [
+  "jbuilder" { build }
+  "ppxlib" { >= "0.3.0" }
+]

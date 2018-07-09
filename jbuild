@@ -1,0 +1,9 @@
+(jbuild_version 1)
+
+(library
+ ((name ppx_cps)
+  (public_name ppx_cps)
+  (kind ppx_rewriter)
+  (modules ppx_cps)
+  (libraries
+   (ppxlib))))
