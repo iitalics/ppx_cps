@@ -7,3 +7,17 @@
   (modules ppx_cps)
   (libraries
    (ppxlib))))
+
+(executable
+ ((name test)
+  (public_name ppx_cps_test)
+  (modes (byte))
+  (modules test)
+  (preprocess (pps (ppx_cps)))
+  (libraries
+   (oUnit))))
+
+(alias
+ ((name runtest)
+  (action
+   (run ocamlrun ${exe:test.bc}))))
